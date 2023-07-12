@@ -52,12 +52,10 @@ jobs:
       with:
     # The directory to archive from
         root-directory: SymX-UI\bin\Release\net6.0-windows
-        name: SymX-Release.zip
-    - name: Test
-      run: cmd.exe /c dir /a-d /b /s
+        name: SymX-Release
     # Upload the package: https://github.com/marketplace/actions/upload-a-build-artifact
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
       with:
         name: SymX Release
-        path: SymX-UI\bin\Release\SymX-Release.zip
+        path: SymX-Release.zip
